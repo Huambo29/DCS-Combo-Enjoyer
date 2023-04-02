@@ -1,3 +1,4 @@
+--fastdust to pedał
 wyniki = {}
 -- Reakcja na zniszczenie samolotu przeciwnika
 --EVENTHANDLER={}
@@ -22,7 +23,7 @@ end
 function deduwa:OnEventKill(EventData)
     gracz = EventData.TgtPlayerName
     MESSAGE:New(" gracz zabity = " .. gracz .. " ", 20):ToAll()
-	
+
     if wyniki[gracz] ~= nil then
         wyniki[gracz] = 0
     end
@@ -38,7 +39,6 @@ function podrabiana_deduwa:OnEventPlayerEnterAircraft(EventData)
     MESSAGE:New(" gracz śmierć = " .. EventData.IniPlayerName .. " ", 20):ToAll()
     Wyniki[gracz] = nil
 end]]
-
 --Do zrobienia:
 --1. Warunek dla eventhandlera czy koles nie zginal (jak zginie zaczyna liczyc od nowa)
 --2. Ma zliczac tylko samoloty
